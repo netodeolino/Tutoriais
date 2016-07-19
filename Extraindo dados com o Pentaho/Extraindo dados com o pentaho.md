@@ -9,7 +9,7 @@ A segunda coisa a ser feita é criar a tabela que vai receber os dados da base q
 ![Image 02](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_02.png?raw=true)
 
 Minha tabela, referente ao meu arquivo `.csv`, ficou como segue a imagem. Dei ao nome da tabela o mesmo nome de meu arquivo .csv neste caso, pois pode facilitar o entendimento do mesmo. Repare também que meus atributos DISCIPLINA e GABARITO eu coloquei com um varchar maior do que aparentemente eu precisava conforme a imagem anterior. Eu fiz isto para garantir que a extração não desse erro caso no meio da minha base .csv tenha tuplas com varchar maior que os primeiros valores que vi nos campos conforme imagem anterior. Só precisa fazer isto para campos do tipo string/varchar.
-**NOTA:** É mostrado os primeiros campos do arquivo
+**NOTA:** É mostrado os primeiros campos do arquivo!
 
 ![Image 03](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_03.png?raw=true)
 
