@@ -1,6 +1,6 @@
 # Um Simples Guia Passo-a-Passo Para Você Que Precisa Extrair Dados De Arquivos Para Seu Banco De Dados
 
-A primeira coisa que fazemos é criar um Banco no Postgres, no meu caso foi “aulapentaho”.
+A primeira coisa que fazemos é criar um Banco no Postgres, no meu caso foi `aulapentaho`.
 
 ![Image 01](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_01.png?raw=true)
 
@@ -12,7 +12,7 @@ Minha tabela, referente ao meu arquivo .csv, ficou como segue a imagem. Dei ao n
 
 ![Image 03](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_03.png?raw=true)
 
-Nesta imagem abro o Pentaho no local onde o deixei. Ele abre executando este spoon.sh!
+Nesta imagem abro o Pentaho no diretório onde o armazenei. Eleexecuta com o arquivo `spoon.sh`.
 
 ![Image 04](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_04.png?raw=true)
 
@@ -20,15 +20,15 @@ Com o pentaho aberto der dois cliques em Transformações.
 
 ![Image 05](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_05.png?raw=true)
 
-Em input clique em 'CSV file input' arraste e solte no quadro branco.
+Em input clique em `CSV File Input` arraste e solte no quadro branco.
 
 ![Image 06](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_06.png?raw=true)
 
-Vai ficar como na imagem. Faça o mesmo em Output com 'Table output'.
+Vai ficar como na imagem. Faça o mesmo em Output com `Table Output`.
 
 ![Image 07](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_07.png?raw=true)
 
-Dê um clique em Table output. Clique agora na “setinha” dentro da “caixinha” que fica a esquerda, arraste e solte em 'CSV file input' e clique em 'Main input...'. A opção de cima*
+Dê um clique em Table output. Clique agora na seta dentro da caixa que fica a esquerda, arraste e solte em `CSV File Input` e clique em `Main Input...`.
 
 ![Image 08](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_08.png?raw=true)
 
@@ -37,75 +37,75 @@ Deve ficar como a imagem.
 ![Image 09](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_09.png?raw=true)
 
 
-Der dois cliques sobre 'CSV input file'. Vai abrir esta tela.
+Der dois cliques sobre `CSV input file`. Vai abrir a seguinte tela.
 
 ![Image 10](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_10.png?raw=true)
 
-Em 'Filename' clique em navegar e selecione o teu arquivo .csv que quer extrair (o mesmo que usou para criar a tabela no banco). Em 'Delimiter' ponha o delimitador do arquivo que é geralmente ; ou espaço. Abra tua base com o gedit para saber o delimitador correto. Depois clique em 'Obtem Campos'.
+Em `Filename` clique em navegar e selecione o teu arquivo .csv que quer extrair (o mesmo que usou para criar a tabela no banco). Em `Delimiter` ponha o delimitador do arquivo que é geralmente ";" ou " " (ponto e virgula ou espaço). Abra tua base com o gedit para saber o delimitador correto. Depois clique em `Obtem Campos`.
 
 ![Image 11](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_11.png?raw=true)
 
-Vai abrir esta tela, clique em OK.
+Vai abrir a seguinte tela, clique em OK.
 
 ![Image 12](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_12.png?raw=true)
 
-Nos tipos que forem do tipo String ponha o tamanho que colocou no teu varchar na hora de criar a tabela. Exemplo: O meu gabarito eu coloquei varchar(2), aqui nesta tela o gabarito aparece com tamanho 1, então eu editei para 2 na quarta coluna, conforme imagem. Depois clique em 'Preview', coloque 100 e clique OK. Os valores da base devem ser mostrados em uma tela, depois é só fechar a tela de preview e clicar em OK na tela de CSV Input. (O preview é só para ver se tá tudo OK).
+Nos tipos que forem do tipo String ponha o tamanho que colocou no teu varchar na hora de criar a tabela. Exemplo: O meu GABARITO eu coloquei varchar(2), aqui nesta tela o GABARITO aparece com tamanho 1, então eu editei para 2 na quarta coluna, conforme imagem abaixo. Depois clique em `Preview`, digite 100 e clique OK. Os valores da base devem ser mostrados em uma tela, depois é só fechar a tela de preview e clicar em OK na tela de CSV Input. Esta tela de preview somente serve para ver se tudo está indo como desejado.
 
 ![Image 13](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_13.png?raw=true)
 
-Agora em 'Table output' (da dois cliques para abrir) vá em 'New...' para criar uma nova conexão.
+Agora em `Table Output` der dois cliques para abrir e vá em `New...` para criar uma nova conexão.
 
 ![Image 14](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_14.png?raw=true)
 
-Configure a conexão conforme teu banco, tabela e senha de acesso ao banco. Der um nome a conexão e clique em 'Test'.
+Configure a conexão conforme teu banco, tabela e senha de acesso ao banco. Der um nome a conexão e clique em `Test`.
 
 ![Image 15](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_15.png?raw=true)
 
-Se tudo ocorrer bem a mensagem a baixo irá aparecer. Agora clica em OK da mensagem e no OK da 'Database Connection'.
+Se tudo ocorrer bem a mensagem a baixo irá aparecer. Agora clique em OK da mensagem e no OK de `Database Connection`.
 
 ![Image 16](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_16.png?raw=true)
 
-Em 'Target schema' navegue e selecione public. Em 'Target table' selecione a tabela que você criou para armazenar os dados de extreção. Depois selecione 'Specify database fields' e abra a aba 'Database fields'.
+Em `Target Schema` navegue e selecione public. Em `Target Table` selecione a tabela que você criou para armazenar os dados de extração. Depois selecione `Specify Database Fields` e abra a aba `Database fields`.
 
 ![Image 17](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_17.png?raw=true)
 
-Clique em 'Get fields' e depois em 'Enter field mapping' e clique em OK.
+Clique em `Get Fields` e depois em `Enter Field Mapping` e clique em OK.
 
 ![Image 18](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_18.png?raw=true)
 
 
-Clique em 'SQL' e esta tela irá aparecer. Depois clica em 'Execute'. Feche as telas que abrirem.
+Clique em `SQL` e a tela abaixo irá aparecer. Depois clique em `Execute`. Feche as telas que abrirem posteriormente.
 
 ![Image 19](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_19.png?raw=true)
 
-Agora clica em 'OK' na tela de Table output.
+Agora clica em `OK` na tela de Table output.
 
 ![Image 20](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_20.png?raw=true)
 
-Nesta tela clica no “triangulo” de play (digamos assim) para executar a transformação.
+Nesta tela clique na opção de Play para executar a transformação.
 
 ![Image 21](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_21.png?raw=true)
 
-Nesta tela clica em 'Run'.
+Nesta tela clica em `Run`.
 
 ![Image 22](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_22.png?raw=true)
 
-Nesta em 'Sim'.
+Nesta em `Sim` para salvar sua transformação.
 
 ![Image 23](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_23.png?raw=true)
 
-Salve a transformação em algum local. (Meio que obrigatório).
+Salve a transformação no local que desejar. > Nota do tutor: Meio que obrigatório!
 
 ![Image 24](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_24.png?raw=true)
 
-Imagem da transformação finalizada. Sorria :) Pode demorar muito tempo! Depende do tamanho da base é claro.
+Imagem da transformação finalizada. Sorria :) Este passo pode demorar muito tempo dependendo do tamanho da base!
 
 ![Image 25](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_25.png?raw=true)
 
-De volta ao postgres, crie novamente a chave primaria da tabela, pois o pentaho a exclui. Clica sobre a tabela com o botão direito e vai em 'New Object' e 'New Primary Key'. Vai até a aba 'Columns' e em 'Column' selecione a a coluna que deve ser chave primária, clica em 'Add' e depois em 'OK'. Este passo pode demorar um pouco, depende do tamanho de tua base, porque o postgres procura nesta coluna valores duplicados, pois caso haja não pode ser chave primária.
+De volta ao Postgres, crie novamente a chave primária da tabela, pois o Pentaho a exclui. Clique sobre a tabela com o botão direito do mouse e vá em `New Object` e `New Primary Key`. Vá até a aba `Columns` e em `Column` selecione a coluna que deve ser chave primária, clique em `Add` e depois em `OK`. Este passo pode demorar um pouco, depende do tamanho de tua base, porque o Postgres procura nesta coluna valores duplicados, pois caso haja não pode ser chave primária.
 
 ![Image 26](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_26.png?raw=true)
 
-Por fim de um select em teu banco para ver se está tudo ok com a extração. Não se esqueça de limitar a consulta, pois iria demorar bastante para o postgres ler toda a base e imprimir na tela.
+Por fim faça uma consulta (select) em teu banco para ver se está tudo OK com a extração. Não se esqueça de limitar a consulta, pois iria demorar bastante para o Postgres ler toda a base e imprimir na tela.
 
 ![Image 27](https://github.com/netodeolino/Tutoriais/blob/master/Extraindo%20dados%20com%20o%20Pentaho/Images/img_27.png?raw=true)
