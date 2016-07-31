@@ -1,8 +1,12 @@
 # Um tutorial de uma simples aplicação usando Electron
 
-Pré-requisitos:
-    - Node.js
-    - MySQL
+###Pré-requisitos:###
+<ol>
+    <li>Node.js</li>
+    <li>MySQL</li>
+</ol>
+
+<br/>
 
 ## PARTE 01 - Instalação, Configuração e Entendimento do Projeto ##
 
