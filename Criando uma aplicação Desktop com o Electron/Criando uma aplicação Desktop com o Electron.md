@@ -1,3 +1,9 @@
+# Um tutorial de uma simples aplicação usando Electron
+
+Pré-requisitos:
+    - Node.js
+    - MySQL
+
 ## PARTE 01 - Instalação, Configuração e Entendimento do Projeto ##
 
 Primeiro vamos usar o <b>Quick Start</b> para criar uma aplicação rápida do Electron. Essa aplicação nos fornecerá uma estrutura inicial para o projeto.
@@ -199,4 +205,4 @@ Fazendo um cadastro.
 
 Olhando se deu certo no banco de dados.
 
-![Image 19](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img19.png?raw=true)
+![Image 19](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img_19.png?raw=true)
