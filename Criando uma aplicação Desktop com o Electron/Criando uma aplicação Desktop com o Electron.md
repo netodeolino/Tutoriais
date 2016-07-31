@@ -165,7 +165,12 @@ Vamos agora criar a base e uma tabela no banco MySQL.
 ```sql
 create database tutorialelectron;
 
-create table usuario (nome varchar(60), email varchar(60), login varchar(30), senha varchar(30));
+create table usuario (
+    nome varchar(60),
+    email varchar(60),
+    login varchar(30),
+    senha varchar(30)
+);
 ```
 
 No arquivo `index.html` é necessário importar os scripts criados por nós para que todas as funções necessárias funcionem corretamente.
