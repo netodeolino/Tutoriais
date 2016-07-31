@@ -210,3 +210,8 @@ Fazendo um cadastro.
 Olhando se deu certo no banco de dados.
 
 ![Image 19](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img19.png?raw=true)
+
+<br/>
+
+##FIM!##
+Bom, espero que esse tutorial ajude á você a iniciar com seus primeiros projetos com Electron e respectivamente Node.js. Quaisquer dúvidas pode entrar em contato comigo pelo meu email que está na página inicial do meu GitHub. Obrigado e até mais!
