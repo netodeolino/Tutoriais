@@ -49,6 +49,7 @@ Todas as dependências necessárias que surgirem durante o desenvolvimento do se
 
 Nesta pasta ficam instalados todas as dependências do projeto, como por exemplo o MySQL que foi falado no tópico anterior.
 
+<br/>
 
 ## PARTE 02 - Criando uma aplicação simples ##
 
@@ -56,7 +57,7 @@ Agora chegou o momento de brincar um pouco com Electron. Vamos criar um visual m
 
 <br/>
 
-Primeiro vamos criar duas pastas para que o projeto fique mais organizado e modularizado. As pastas são `public`, onde ficarão os arquivos de CSS e JavaScript, e `views`, onde ficarão as demais telas (.html) da aplicação.
+Primeiro vamos criar duas pastas para que o projeto fique mais organizado e modularizado. As pastas são `public`, onde ficarão os arquivos de CSS e JavaScript, e `views`, onde ficarão as demais telas da aplicação.
 
 ![Image 07](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img07.png?raw=true)
 
