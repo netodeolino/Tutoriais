@@ -3,38 +3,38 @@
 ###Pré-requisitos:###
 <ol>
     <li>Node.js</li>
+    <li>Express.js</li>
 </ol>
 
 <br/>
 
-## PARTE 01 - Instalação, Configuração e Entendimento do Projeto ##
+## PARTE 01 - Criando um novo Projeto ##
 
-Primeiro vamos usar o <b>Quick Start</b> para criar uma aplicação rápida do Electron. Essa aplicação nos fornecerá uma estrutura inicial para o projeto.
+Para criar um novo os passos são bastantes simples.
 
-Clone o repositório Quick Start:
-`$ git clone https://github.com/electron/electron-quick-start`
+Primeiro execute o comando abaixo e onde está escrito `site` troque pelo nome que deseja dar a seu projeto:
+`$ express site --ejs`
 
-Entre no repositório:
-`$ cd electron-quick-start`
-
-Instale as dependências e Execute pela primeira vez a aplicação:
-`$ npm install && npm start`
-
-A instalação das dependências vai ser igual ou similar a imagem abaixo:
+Alguns arquivos irão ser cridos, como mostra na imagem abaixo.
 
 ![Image 01]()
 
 <br/>
 
-A execução da aplicação vai ser similar a imagem abaixo:
+Agora entre no repositório e instale as dependências do projeto com o comando abaixo:
+`$ cd site && npm install`
+
+<br/>
+
+A pasta onde seu projeto está localizado vai/ficar ser similar a imagem abaixo:
 
 ![Image 02]()
 
 <br/>
 
-Se analisarmos, alguns arquivos foram baixados no projeto, dentre eles estão `main.js`, `index.html`, `package.json` e a pasta `node_modules`. Vamos falar um pouco sobre cada um deles agora.
+## PARTE 02 - Entendendo a Estrutura Básica do Express ##
 
-#### main.js ####
+#### app.js ####
 
 ![Image 03]()
 
@@ -60,7 +60,7 @@ Nesta pasta ficam instalados todas as dependências do projeto, como por exemplo
 
 <br/>
 
-## PARTE 02 - Criando uma aplicação simples ##
+
 
 Agora chegou o momento de brincar um pouco com Electron. Vamos criar um visual mais bonito para a tela inicial da aplicação e criar um cadastro simples usando o banco MySQL. No meu exemplo vou fazer o uso de Bootstrap e JQuery mas os mesmos não são obrigatórios.
 
