@@ -17,7 +17,7 @@ Primeiro execute o comando abaixo e onde está escrito `site` troque pelo nome q
 
 Alguns arquivos irão ser cridos, como mostra na imagem abaixo.
 
-![Image 01]()
+![Image 01](Tutoriais/Criando sua Primeira Aplicação Web com Node.js e Express.js/Images/img_01.png)
 
 <br/>
 
