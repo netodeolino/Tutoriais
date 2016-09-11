@@ -52,6 +52,11 @@ Todas as dependências necessárias que surgirem durante o desenvolvimento do se
 
 Este arquivo é a página inicial do website, mas você pode adicionar uma outra em teu local alterando o valor de `response` ou `res` no index.js, mas geralmente é o mesmo não é alterado.
 
+#### index.js ####
+
+![Image 06](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20sua%20Primeira%20Aplica%C3%A7%C3%A3o%20Web%20com%20Node.js%20e%20Express.js/Images/img_06.png?raw=true)
+
+Este arquivo é onde você faz o controle de suas páginas. Por exemplo, quando abrimos a primeira página do website, que é geralmente tratado como sendo somente uma barra `/`, o local que vai olhar qual arquivo `.ejs` deve tratar essa requisição é alguma função que está em `index.js`.
 
 #### style.css ####
 
