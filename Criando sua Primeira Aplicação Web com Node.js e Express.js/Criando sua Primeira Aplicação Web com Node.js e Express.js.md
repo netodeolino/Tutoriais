@@ -1,9 +1,8 @@
-# Um tutorial de uma simples aplicação usando Electron
+# Criando sua Primeira Aplicação Web com Node.js e Express.js
 
 ###Pré-requisitos:###
 <ol>
     <li>Node.js</li>
-    <li>MySQL</li>
 </ol>
 
 <br/>
@@ -23,13 +22,13 @@ Instale as dependências e Execute pela primeira vez a aplicação:
 
 A instalação das dependências vai ser igual ou similar a imagem abaixo:
 
-![Image 01](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img01.png?raw=true)
+![Image 01]()
 
 <br/>
 
 A execução da aplicação vai ser similar a imagem abaixo:
 
-![Image 02](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img02.png?raw=true)
+![Image 02]()
 
 <br/>
 
@@ -37,25 +36,25 @@ Se analisarmos, alguns arquivos foram baixados no projeto, dentre eles estão `m
 
 #### main.js ####
 
-![Image 03](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img03.png?raw=true)
+![Image 03]()
 
 Neste arquivo é configurado para nós a maioria dos recursos necessários para o início de um projeto, sendo este simples ou não. Algumas destas configurações são o tamanho da janela da aplicação, o caminho para a primeira tela, dentre outras coisas.
 
 #### index.html ####
 
-![Image 04](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img04.png?raw=true)
+![Image 04]()
 
 Este arquivo é a página, ou a tela (uma vez que estamos falando de uma aplicação desktop), inicial da aplicação. Nela você pode criar um design e alguma interação inicial para outras telas usando de recursos como CSS, Bootstrap, dentre outros, como se estivesse criando uma aplicação Web.
 
 #### package.json ####
 
-![Image 05](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img05.png?raw=true)
+![Image 05]()
 
 Todas as dependências necessárias que surgirem durante o desenvolvimento do seu projeto você pode instalar por este arquivo executando o comando `npm install`. Por exemplo, suponha que você vá trabalhar com MySQL, então você vem até este arquivo e em "devDependencies" adiciona `"mysql": "*"`, com isto a última versão do MySQL é adicionado na sua pasta `node_modules` e fica disponível para ser usado por você no projeto usando o comando <code>require("mysql");</code>.
 
 #### node_modules ####
 
-![Image 06](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img06.png?raw=true)
+![Image 06]()
 
 Nesta pasta ficam instalados todas as dependências do projeto, como por exemplo o MySQL que foi falado no tópico anterior.
 
@@ -69,14 +68,14 @@ Agora chegou o momento de brincar um pouco com Electron. Vamos criar um visual m
 
 Primeiro vamos criar duas pastas para que o projeto fique mais organizado e modularizado. As pastas são `public`, onde ficarão os arquivos de CSS e JavaScript, e `views`, onde ficarão as demais telas da aplicação.
 
-![Image 07](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img07.png?raw=true)
+![Image 07]()
 
 <br/>
 
 Também é necessário instalar o MySQL para que a conexão com o banco de dados seja possível.
 Para instalar o MySQL adicione no arquivo `package.json` a dependência `"mysql": "*"`. O mesmo irá ficar como a imagem abaixo. Posteriormente execute o comando `npm install` para que a dependência enfim seja instalada.
 
-![Image 08](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img08.png?raw=true)
+![Image 08]()
 
 <br/>
 
@@ -126,13 +125,13 @@ O próximo passo então é criar um arquivo JavaScript onde iremos implementar a
 
 Antes de criar o arquivo em si vamos criar as pastas de `CSS` e `JS` (JavaScript) assim como a imagem abaixo.
 
-![Image 09](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img09.png?raw=true)
+![Image 09]()
 
 <br/>
 
 Dentro da pasta `js` vamos criar mais duas pastas, são elas `bd`, onde vão ficar os futuros arquivos de configuração do banco, e  `controllers`, onde ficará os arquivos de controle da aplicação.
 
-![Image 10](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img10.png?raw=true)
+![Image 10]()
 
 <br/>
 
@@ -140,7 +139,7 @@ Finalmente, dentro de `controllers` vamos criar o arquivo `controller.js` onde i
 
 Na imagem abaixo mostro como a função vai ficar.
 
-![Image 11](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img11.png?raw=true)
+![Image 11]()
 
 <br/>
 
@@ -148,13 +147,13 @@ Agora vou mostrar o passo-a-passo necessário para que seja possível o cadastro
 
 Primeiro criamos o arquivo de conexão com o banco dentro da pasta `bd` chamado `ConexaoBanco.js`.
 
-![Image 12](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img12.png?raw=true)
+![Image 12]()
 
 <br/>
 
 O próximo arquivo irá se chamar `UsuarioDAO.js`. É nele que irá ser implementado todas as funções que irão se comunicar com o banco. Exemplos: Salvar, Deletar, Atualizar, Dentre outros. No nosso exemplo vamos fazer somente o Salvar.
 
-![Image 13](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img13.png?raw=true)
+![Image 13]()
 
 <br/>
 
@@ -166,7 +165,7 @@ Para complementar o passo anterior vamos criar o arquivo `Usuario.js` que irá s
 
 Por último vamos fazer o arquivo e a respectiva função que é chamada na tela inicial (index.html).
 
-![Image 15](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img15.png?raw=true)
+![Image 15]()
 
 <br/>
 
@@ -195,21 +194,25 @@ No arquivo `index.html` é necessário importar os scripts criados por nós para
 
 Vamos agora executar nossa aplicação. Para isso execute o comando `npm start`.
 
-![Image 16](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img16.png?raw=true)
+![Image 16]()
 
 <br/>
 
 Fazendo um cadastro.
 
-![Image 17](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img17.png?raw=true)
+![Image 17]()
 
-![Image 18](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img18.png?raw=true)
+![Image 18]()
 
 <br/>
 
 Olhando se deu certo no banco de dados.
 
-![Image 19](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img19.png?raw=true)
+![Image 19]()
+
+<br/>
+
+![Image 20]()
 
 <br/>
 

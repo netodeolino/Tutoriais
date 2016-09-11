@@ -167,4 +167,8 @@ Por fim faça uma consulta (select) em teu banco para ver se está tudo OK com a
 ## FIM!
 Eu espero que este tutorial tenha sido útil! O mesmo foi criado por mim com a intenção de ajudar qualquer pessoa que precise extrair dados de algum local para um Banco de Dados específico. Apesar do tutorial ter sido feito usando como exemplo o Postgres e um arquivo `.CSV`, acredito eu que fique muito mais fácil para alguns realizar o procedimento com outros SGBD's e outros arquivos como um `.TXT`, pois vai mudar somente algumas configurações simples de serem feitas.
 
-Neto Deolino – linkedin.com/in/netodeolino
+####Neto Deolino
+<ol>
+    <li> http://linkedin.com/in/netodeolino </li>
+    <li> http://netodeolino.github.io </li>
+</ol>
