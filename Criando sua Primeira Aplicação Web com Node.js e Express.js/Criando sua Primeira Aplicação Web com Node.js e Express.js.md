@@ -40,11 +40,15 @@ A pasta onde seu projeto está localizado vai/ficar ser similar a imagem abaixo:
 
 Neste arquivo é configurado, praticamente, todos os recursos necessários para o projeto, sendo este simples ou não. Algumas destas configurações são rotas, favicon do website, sessão, dentre outras coisas.
 
+<br/>
+
 #### package.json ####
 
 ![Image 04](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20sua%20Primeira%20Aplica%C3%A7%C3%A3o%20Web%20com%20Node.js%20e%20Express.js/Images/img_04.png?raw=true)
 
 Todas as dependências necessárias que surgirem durante o desenvolvimento do seu projeto você pode instalar por este arquivo executando o comando `npm install`. Por exemplo, suponha que você vá trabalhar com MySQL, então você vem até este arquivo e em "dependencies" adiciona `"mysql": "*"`, com isto a última versão do MySQL é adicionado na sua pasta `node_modules` e fica disponível para ser usado por você no projeto usando o comando <code>require("mysql");</code>.
+
+<br/>
 
 #### index.ejs ####
 
@@ -52,11 +56,15 @@ Todas as dependências necessárias que surgirem durante o desenvolvimento do se
 
 Este arquivo é a página inicial do website, mas você pode adicionar uma outra em teu local alterando o valor de `response` ou `res` no index.js, mas geralmente é o mesmo não é alterado.
 
+<br/>
+
 #### index.js ####
 
 ![Image 06](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20sua%20Primeira%20Aplica%C3%A7%C3%A3o%20Web%20com%20Node.js%20e%20Express.js/Images/img_06.png?raw=true)
 
 Este arquivo é onde você faz o controle de suas páginas. Por exemplo, quando abrimos a primeira página do website, que é geralmente tratado como sendo somente uma barra `/`, o local que vai olhar qual arquivo `.ejs` deve tratar essa requisição é alguma função que está em `index.js`.
+
+<br/>
 
 #### style.css ####
 
@@ -143,6 +151,8 @@ Agora em `index.ejs` adicione o seguinte código.
 </form>
 ```
 
+<br/>
+
 Para que possamos utilizar o `formidable` precisamos instalar o mesmo em nossa pasta `node_modules`, e para fazer isto vamos usar o `package.json`.
 
 ![Image 10](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20sua%20Primeira%20Aplica%C3%A7%C3%A3o%20Web%20com%20Node.js%20e%20Express.js/Images/img_10.png?raw=true)
@@ -179,6 +189,8 @@ No navegador vamos digitar `localhost:3000` e a seguinte página irá ser aberta
 
 ![Image 13](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20sua%20Primeira%20Aplica%C3%A7%C3%A3o%20Web%20com%20Node.js%20e%20Express.js/Images/img_13.png?raw=true)
 
+<br/>
+
 Escolha uma imagem e clique em `Upload Image` para que ela seja salva.
 
 ![Image 14](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20sua%20Primeira%20Aplica%C3%A7%C3%A3o%20Web%20com%20Node.js%20e%20Express.js/Images/img_14.png?raw=true)
@@ -188,9 +200,12 @@ Escolha uma imagem e clique em `Upload Image` para que ela seja salva.
 O retorno da ação anterior é uma mensagem na tela mostrando o local que a imagem foi salva.
 > Em `saveImage.js` você pode mudar o local de upload de imagens.
 
-![Image 16](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20sua%20Primeira%20Aplica%C3%A7%C3%A3o%20Web%20com%20Node.js%20e%20Express.js/Images/img_16.png?raw=true)
+<br/>
 
 Entrando na pasta `uploads` agora encontro a imagem salva.
+
+![Image 16](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20sua%20Primeira%20Aplica%C3%A7%C3%A3o%20Web%20com%20Node.js%20e%20Express.js/Images/img_16.png?raw=true)
+
 
 <br/>
 
