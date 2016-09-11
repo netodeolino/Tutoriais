@@ -131,106 +131,66 @@ Agora em `index.ejs` adicione o seguinte código.
 ![Image 08]()
 
 ```html
-	<form action="/upload" method="POST" enctype="multipart/form-data">
-        Select an image to upload:
-        <input type="file" name="image">
-        <input type="submit" value="Upload Image">
-    </form>
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    Select an image to upload:
+    <input type="file" name="image">
+    <input type="submit" value="Upload Image">
+</form>
 ```
 
+Para que possamos utilizar o `formidable` precisamos instalar o mesmo em nossa pasta `node_modules`, e para fazer isto vamos usar o `package.json`.
 
+![Image 09]()
+
+Adicionando o seguinte trecho:
+`$ "formidable": "*"`
+
+E com isso temos a última versão disponível para ser utilizada.
 
 <br/>
 
-Dentro da pasta `js` vamos criar mais duas pastas, são elas `bd`, onde vão ficar os futuros arquivos de configuração do banco, e  `controllers`, onde ficará os arquivos de controle da aplicação.
+Por último vamos configurar o arquivo `index.js` para que quando for requisitado que uma imagem seja salva atravez da URL `/upload` o mesmo chame a função necessária para que a ação seja possível.
 
 ![Image 10]()
 
+No arquivo vai ser adicionado duas linhas de código, as mesmas são:
+
+```javascript
+var SaveImage = require('../public/javascripts/saveImage'); /* Na linha 05 da imagem acima */
+router.post('/upload', SaveImage.saveImage); /* Na linha 13 da imagem acima */
+```
+
 <br/>
 
-Finalmente, dentro de `controllers` vamos criar o arquivo `controller.js` onde irá ser implementado a função de cadastro.
+## PARTE 04 - Reinstalando as dependências e Rodando a Aplicação ##
 
-Na imagem abaixo mostro como a função vai ficar.
+Vamos rodar novamente o comando `npm install` para que o `formidable` possa enfim ser adicionado e posteriormente vamos dar um `npm start` para que a aplicação execute.
 
 ![Image 11]()
 
 <br/>
 
-Agora vou mostrar o passo-a-passo necessário para que seja possível o cadastro de um usuário.
-
-Primeiro criamos o arquivo de conexão com o banco dentro da pasta `bd` chamado `ConexaoBanco.js`.
+No navegador vamos digitar `localhost:3000` e a seguinte página irá ser aberta.
 
 ![Image 12]()
 
-<br/>
-
-O próximo arquivo irá se chamar `UsuarioDAO.js`. É nele que irá ser implementado todas as funções que irão se comunicar com o banco. Exemplos: Salvar, Deletar, Atualizar, Dentre outros. No nosso exemplo vamos fazer somente o Salvar.
+Escolha uma imagem e clique em `Upload Image` para que ela seja salva.
 
 ![Image 13]()
 
-<br/>
-
-Para complementar o passo anterior vamos criar o arquivo `Usuario.js` que irá ser o objeto usuário do projeto (Similar ao model do MVC).
-
 ![Image 14]()
 
-<br/>
-
-Por último vamos fazer o arquivo e a respectiva função que é chamada na tela inicial (index.html).
+O retorno da ação anterior é uma mensagem na tela mostrando o local que a imagem foi salva.
+> Em `saveImage.js` você pode mudar o local de upload de imagens.
 
 ![Image 15]()
 
-<br/>
-
-Vamos agora criar a base e uma tabela no banco MySQL.
-
-```sql
-create database tutorialelectron;
-
-create table usuario (
-    nome varchar(60),
-    email varchar(60),
-    login varchar(30),
-    senha varchar(30)
-);
-```
-
-No arquivo `index.html` é necessário importar os scripts criados por nós para que todas as funções necessárias funcionem corretamente.
-
-```javascript
-	<script src="./public/js/bd/ConexaoBanco.js"></script>
-    <script src="./public/js/bd/UsuarioDAO.js"></script>
-    <script src="./public/js/bd/cadastroController.js"></script>
-    <script src="./public/js/bd/Usuario.js"></script>
-	<script src="./public/js/controllers/controller.js"></script>
-```
-
-Vamos agora executar nossa aplicação. Para isso execute o comando `npm start`.
-
-![Image 16]()
-
-<br/>
-
-Fazendo um cadastro.
-
-![Image 17]()
-
-![Image 18]()
-
-<br/>
-
-Olhando se deu certo no banco de dados.
-
-![Image 19]()
-
-<br/>
-
-![Image 20]()
+Entrando na pasta `uploads` agora encontro a imagem salva.
 
 <br/>
 
 ##FIM!##
-Bom, espero que esse tutorial ajude á você a iniciar com seus primeiros projetos com Electron e respectivamente Node.js. Quaisquer dúvidas pode entrar em contato comigo pelo meu email que está na página inicial do meu GitHub. Obrigado e até mais!
+Bom, espero que esse tutorial ajude á você a iniciar com seus primeiros projetos com Express e respectivamente Node.js. Quaisquer dúvidas pode entrar em contato comigo pelo meu email que está na página inicial do meu GitHub. Obrigado e até mais!
 
 ####Neto Deolino
 <ol>
