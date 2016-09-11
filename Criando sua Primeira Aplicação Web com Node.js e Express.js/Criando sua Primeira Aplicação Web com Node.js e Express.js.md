@@ -38,94 +38,107 @@ A pasta onde seu projeto está localizado vai/ficar ser similar a imagem abaixo:
 
 ![Image 03]()
 
-Neste arquivo é configurado para nós a maioria dos recursos necessários para o início de um projeto, sendo este simples ou não. Algumas destas configurações são o tamanho da janela da aplicação, o caminho para a primeira tela, dentre outras coisas.
-
-#### index.html ####
-
-![Image 04]()
-
-Este arquivo é a página, ou a tela (uma vez que estamos falando de uma aplicação desktop), inicial da aplicação. Nela você pode criar um design e alguma interação inicial para outras telas usando de recursos como CSS, Bootstrap, dentre outros, como se estivesse criando uma aplicação Web.
+Neste arquivo é configurado, praticamente, todos os recursos necessários para o projeto, sendo este simples ou não. Algumas destas configurações são rotas, favicon do website, sessão, dentre outras coisas.
 
 #### package.json ####
 
+![Image 04]()
+
+Todas as dependências necessárias que surgirem durante o desenvolvimento do seu projeto você pode instalar por este arquivo executando o comando `npm install`. Por exemplo, suponha que você vá trabalhar com MySQL, então você vem até este arquivo e em "dependencies" adiciona `"mysql": "*"`, com isto a última versão do MySQL é adicionado na sua pasta `node_modules` e fica disponível para ser usado por você no projeto usando o comando <code>require("mysql");</code>.
+
+#### index.ejs ####
+
 ![Image 05]()
 
-Todas as dependências necessárias que surgirem durante o desenvolvimento do seu projeto você pode instalar por este arquivo executando o comando `npm install`. Por exemplo, suponha que você vá trabalhar com MySQL, então você vem até este arquivo e em "devDependencies" adiciona `"mysql": "*"`, com isto a última versão do MySQL é adicionado na sua pasta `node_modules` e fica disponível para ser usado por você no projeto usando o comando <code>require("mysql");</code>.
+Este arquivo é a página inicial do website, mas você pode adicionar uma outra em teu local alterando o valor de `response` ou `res` no index.js, mas geralmente é o mesmo não é alterado.
 
-#### node_modules ####
+
+#### style.css ####
 
 ![Image 06]()
 
-Nesta pasta ficam instalados todas as dependências do projeto, como por exemplo o MySQL que foi falado no tópico anterior.
+É o arquivo CSS que já vem como padrão quando criamos o projeto, mas assim como o `index.ejs` o mesmo pode ser alterado e, inclusive, ser adicionado vários outros.
 
 <br/>
 
+## PARTE 03 - Fazendo o Upload de uma Imagem ##
 
-
-Agora chegou o momento de brincar um pouco com Electron. Vamos criar um visual mais bonito para a tela inicial da aplicação e criar um cadastro simples usando o banco MySQL. No meu exemplo vou fazer o uso de Bootstrap e JQuery mas os mesmos não são obrigatórios.
+Agora chegou o momento de brincar um pouco com Express. Neste tutorial vou dar um exemplo de uso de Express não tão comum (digamos assim). Vou mostrar a vocês como fazer o upload de imagens e espero que consigam entender um pouco do funcionamento do Express com este processo simples.
 
 <br/>
 
-Primeiro vamos criar duas pastas para que o projeto fique mais organizado e modularizado. As pastas são `public`, onde ficarão os arquivos de CSS e JavaScript, e `views`, onde ficarão as demais telas da aplicação.
+Vamos criar um arquivo chamado `saveImage.js` dentro da pasta `javascripts`.
 
 ![Image 07]()
 
-<br/>
 
-Também é necessário instalar o MySQL para que a conexão com o banco de dados seja possível.
-Para instalar o MySQL adicione no arquivo `package.json` a dependência `"mysql": "*"`. O mesmo irá ficar como a imagem abaixo. Posteriormente execute o comando `npm install` para que a dependência enfim seja instalada.
+E adicionar o seguinte código dentro do arquivo `saveImage.js`.
+
+
+```javascript
+var formidable = require('formidable');
+var fs = require('fs');
+
+exports.saveImage = function (req, res, next) {
+  var form = new formidable.IncomingForm();
+
+  form.parse(req, function(err, fields, files) {
+    res.writeHead(200, {'content-type': 'text/plain'});
+    res.write('received upload:\n\n');
+    var image = files.image
+      , image_upload_path_old = image.path
+      , image_upload_path_new = './public/uploads/'
+      , image_upload_name = image.name
+      , image_upload_path_name = image_upload_path_new + image_upload_name
+      ;
+
+    if (fs.existsSync(image_upload_path_new)) {
+      fs.rename(
+        image_upload_path_old,
+        image_upload_path_name,
+        function (err) {
+        if (err) {
+          console.log('Err: ', err);
+          res.end('Deu ERRO na hora de mover a imagem!');
+        }
+        var msg = 'Imagem ' + image_upload_name + ' salva em: ' + image_upload_path_new;
+        console.log(msg);
+        res.end(msg);
+      });
+    }
+    else {
+      fs.mkdir(image_upload_path_new, function (err) {
+        if (err) {
+          console.log('Err: ', err);
+          res.end('Deu ERRO na hora de criar o diretório!');
+        }
+        fs.rename(
+          image_upload_path_old,
+          image_upload_path_name,
+          function(err) {
+          var msg = 'Imagem ' + image_upload_name + ' salva em: ' + image_upload_path_new;
+          console.log(msg);
+          res.end(msg);
+        });
+      });
+    }
+  });
+}
+```
+
+Agora em `index.ejs` adicione o seguinte código.
 
 ![Image 08]()
 
-<br/>
-
-No arquivo `index.html` vamos criar um formulario de cadastro.
-
 ```html
-<form role="form" action="" method="post" >
-    <div class="col-md-6">
-        <div class="form-group">
-            <label for="InputName">Nome Completo</label>
-            <div class="input-group">
-                <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Nome Completo" required>
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="InputEmail">Seu Email</label>
-            <div class="input-group">
-                <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email" required  >
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="InputLogin">Seu Login</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="InputLogin" name="InputLogin" placeholder="Login" required  >
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="InputSenha">Sua Senha</label>
-            <div class="input-group">
-                <input type="password" class="form-control" id="InputSenha" name="InputSenha" placeholder="Senha" required  >
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
-            </div>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" onclick="realizarCadastro()" type="button">Cadastrar</button>
-    </div>
-</form>
+	<form action="/upload" method="POST" enctype="multipart/form-data">
+        Select an image to upload:
+        <input type="file" name="image">
+        <input type="submit" value="Upload Image">
+    </form>
 ```
 
-Repare que no fim do formulário, mais precisamente no `button` tem uma chamada à função `realizarCadastro()` quando o botão é clicado. Vai ser essa função que vai realizar alguns procedimentos necessários para que aqueles dados digitados na tela sejam salvos no banco de dados.
 
-> OBSERVAÇÃO: O Bootstrap está sendo utilizado neste formulário.
-
-O próximo passo então é criar um arquivo JavaScript onde iremos implementar a função de cadastro.
-
-Antes de criar o arquivo em si vamos criar as pastas de `CSS` e `JS` (JavaScript) assim como a imagem abaixo.
-
-![Image 09]()
 
 <br/>
 
