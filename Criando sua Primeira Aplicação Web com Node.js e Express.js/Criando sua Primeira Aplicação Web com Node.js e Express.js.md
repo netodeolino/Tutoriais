@@ -1,4 +1,4 @@
-# Criando sua Primeira Aplicação Web com Node.js e Express.js (Em Construção)
+# Criando sua Primeira Aplicação Web com Node.js e Express.js
 
 ###Pré-requisitos:###
 <ol>
