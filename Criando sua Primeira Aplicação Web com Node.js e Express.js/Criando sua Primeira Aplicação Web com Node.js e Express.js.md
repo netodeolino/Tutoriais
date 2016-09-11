@@ -1,4 +1,4 @@
-# Criando sua Primeira Aplicação Web com Node.js e Express.js
+# Criando sua Primeira Aplicação Web com Node.js e Express.js (Em Construção)
 
 ###Pré-requisitos:###
 <ol>
@@ -159,7 +159,7 @@ O próximo arquivo irá se chamar `UsuarioDAO.js`. É nele que irá ser implemen
 
 Para complementar o passo anterior vamos criar o arquivo `Usuario.js` que irá ser o objeto usuário do projeto (Similar ao model do MVC).
 
-![Image 14](https://github.com/netodeolino/Tutoriais/blob/master/Criando%20uma%20aplica%C3%A7%C3%A3o%20Desktop%20com%20o%20Electron/Images/img14.png?raw=true)
+![Image 14]()
 
 <br/>
 
